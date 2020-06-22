@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>titleeee</title>
+</h:head>
+
+<h:body>
+
+    #{2+2} <!--print 4-->
+    <h:outputLabel>hello</h:outputLabel>
+
+    <h:form>
+
+        <h:inputText value="#{index.name}" style="background: crimson"/>
+        <h:commandButton action="#{index.ok}"/>
+        <h:commandButton action="#{index.cancel}"/>
+        <h:commandButton action="two"/> <!--dispatch to two.xhtml-->
+        <h:commandButton action="two.xhtml?faces-redirect=true"/> <!--send redirect to two.xhtml-->
+
+        <h:commandButton action="#{index.getrequestandresponse2(request)}"/> <!--send response-->
+
+        <!--<h:outputScript></h:outputScript>--> <!--tag javascript-->
+        <!--<h:inputHidden-->
+        <!--<h:inputSecret-->
+
+    </h:form>
+
+</h:body>
+
+</html>

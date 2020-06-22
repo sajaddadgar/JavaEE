@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--scope:singleton:ye bar object misaze-->
+    <!--scope:prototype: be ezaye har kodum ye dune object misaze-->
+    <!--init-method: baad az constructor misaze-->
+    <!--destroy-method:zamani seda zade mishe ke oon object az mahfaze ioc container kharej beshe(karbord nadare dar oon had)-->
+    <bean id="x" class="model.PersonManagerImpl"
+          scope="prototype" init-method="start" destroy-method="end">
+
+        <!--set value for input of the constructor-->
+        <constructor-arg index="0" value="sajad"/>
+        <constructor-arg index="1" value="haha"/>
+
+    </bean>
+
+    <bean id="y" class="model.PersonManagerImpl2">
+        <property name="name" value="sajad"/>
+    </bean>
+
+
+</beans>

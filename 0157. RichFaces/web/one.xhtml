@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml"
+      xmlns:h = "http://java.sun.com/jsf/html"
+      xmlns:a4j = "http://richfaces.org/a4j"
+      xmlns:f = "http://java.sun.com/jsf/core"
+      xmlns:rich = "http://richfaces.org/rich">
+
+<h:head>
+    <title>TODO supply a title</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <div style = "display: block; float: left">
+            <h:selectOneRadio value = "#{skin.skinName}" border = "0"
+                              layout = "pageDirection" title = "Changing skin" style = "font-size: 8;
+               font-family: comic" onchange = "submit()">
+                <f:selectItem itemLabel = "plain" itemValue = "plain" />
+                <f:selectItem itemLabel = "emeraldTown" itemValue = "emeraldTown" />
+                <f:selectItem itemLabel = "blueSky" itemValue = "blueSky" />
+                <f:selectItem itemLabel = "wine" itemValue = "wine" />
+                <f:selectItem itemLabel = "japanCherry" itemValue = "japanCherry" />
+                <f:selectItem itemLabel = "ruby" itemValue = "ruby" />
+                <f:selectItem itemLabel = "deepMarine" itemValue = "deepMarine" />
+            </h:selectOneRadio>
+        </div>
+
+        <div style = "display: block; float: left">
+            <rich:panel >
+                <rich:panelMenu style = "font-family: monospace; font-size: 12;">
+                    Changing skin in runtime
+                </rich:panelMenu>
+
+                
+            </rich:panel>
+        </div>
+    </h:form>
+</h:body>
+
+</html>
